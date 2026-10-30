@@ -6,11 +6,14 @@
 
 <h3>1. Comando ls</h3>
 
-El comando ls muestra los archivos y directorios que hay en una ubicación determinada.
+El **comando ls** muestra los archivos y directorios que hay en una ubicación determinada.
 
 Sintaxis:
 
-ls [opciones] [directorio_o_ruta]
+.. code:: Bash
+
+   ls [opciones] [directorio_o_ruta]
+
 Opciones comunes:
 
 • -a → muestra los archivos ocultos, incluidos los que empiezan por un punto (.)
@@ -19,17 +22,25 @@ Opciones comunes:
 
 Ejemplo:
 
-ls -Ra /ruta/al/directorio
-Muestra todos los archivos y subdirectorios de forma recursiva dentro de /ruta/al/directorio, 
+.. code:: Bash
+
+   ls -Ra /ruta/al/directorio
+
+Muestra todos los archivos y subdirectorios de forma recursiva dentro de 
+**/ruta/al/directorio**, 
 incluidos los archivos ocultos, lo que te permite inspeccionar la estructura completa del 
 directorio.
 
-2. Comando pwd
-El comando pwd muestra la ruta completa del directorio de trabajo actual.
+<h3>2. Comando pwd</h3>
+
+El comando ``pwd`` muestra la ruta completa del directorio de trabajo actual.
 
 Sintaxis:
 
-pwd [opciones]
+.. code:: Bash
+
+   pwd [opciones]
+
 Opciones comunes:
 
 • -L → muestra la ruta lógica utilizando enlaces simbólicos o atajos de entorno
@@ -38,16 +49,23 @@ Opciones comunes:
 
 Ejemplo:
 
-pwd -P
+.. code:: Bash
+
+   pwd -P
+
 Muestra la ruta exacta del directorio sin enlaces simbólicos, lo que ayuda a verificar la ubicación 
 real del directorio de trabajo actual.
 
-3. Comando cd
+<h3>3. Comando cd</h3>
+
 El comando cd cambia el directorio de trabajo actual a una ubicación especificada.
 
 Sintaxis:
 
-cd [ruta_o_directorio]
+.. code:: Bash
+
+   cd [ruta_o_directorio]
+
 Opciones comunes: (no hay opciones disponibles para este comando)
 
 Atajos comunes:
@@ -60,16 +78,23 @@ Atajos comunes:
 
 Ejemplo:
 
-cd /var/www/html
+.. code:: Bash
+
+   cd /var/www/html
+
 Cambia el directorio actual a /var/www/html, lo que te permite acceder y administrar los archivos de 
 esa ubicación.
 
-4. Comando mkdir
+<h3>4. Comando mkdir</h3>
+
 El comando mkdir crea uno o más directorios en una ubicación especificada.
 
 Sintaxis:
 
-mkdir [opciones] nombre_directorio1 nombre_directorio2
+.. code:: Bash
+
+   mkdir [opciones] nombre_directorio1 nombre_directorio2
+
 Opciones comunes:
 
 • -m → establece permisos personalizados para el nuevo directorio (p. ej., -m 755)
@@ -78,16 +103,23 @@ Opciones comunes:
 
 Ejemplo:
 
-mkdir -p /ruta/a/carpeta_de_destino/nueva_carpeta
+.. code:: Bash
+
+   mkdir -p /ruta/a/carpeta_de_destino/nueva_carpeta
+
 Crea el directorio /ruta/a/carpeta_de_destino/nueva_carpeta, incluyendo cualquier directorio 
 principal que falte, lo que te permite crear estructuras de carpetas anidadas con un solo comando.
 
-5. Comando rmdir
+<h3>5. Comando rmdir</h3>
+
 El comando mkdir crea uno o más directorios en una ubicación especificada.
 
 Sintaxis:
 
-mkdir [opciones] nombre_del_directorio1 nombre_del_directorio2
+.. code:: Bash
+
+   mkdir [opciones] nombre_del_directorio1 nombre_del_directorio2
+
 Opciones comunes:
 
 • -m → establece permisos personalizados para el nuevo directorio (p. ej., -m 755)
@@ -96,16 +128,23 @@ Opciones comunes:
 
 Ejemplo:
 
-mkdir -p /ruta/a/carpeta_destino/nueva_carpeta
+.. code:: Bash
+
+   mkdir -p /ruta/a/carpeta_destino/nueva_carpeta
+
 Crea el directorio /ruta/a/carpeta_de_destino/nueva_carpeta, incluyendo cualquier directorio 
 principal que falte, lo que te permite crear estructuras de carpetas anidadas con un solo comando.
 
-6. Comando rm
+<h3>6. Comando rm</h3>
+
 El comando rm elimina archivos o directorios del sistema de archivos.
 
 Sintaxis:
 
-rm [opciones] archivo1 archivo2
+.. code:: Bash
+
+   rm [opciones] archivo1 archivo2
+
 Opciones comunes:
 
 • -r → elimina directorios y su contenido de forma recursiva
@@ -116,17 +155,24 @@ Opciones comunes:
 
 Ejemplo:
 
-rm -rf nombre-de-carpeta
+.. code:: Bash
+
+   rm -rf nombre-de-carpeta
+
 Elimina el directorio nombre-de-carpeta y todo su contenido de forma recursiva sin pedir 
 confirmación, lo cual es útil para tareas de limpieza, pero hay que tener cuidado para evitar la 
 pérdida accidental de datos.
 
-7. Comando cp
+<h3>7. Comando cp</h3>
+
 El comando cp copia archivos o directorios de una ubicación a otra.
 
 Sintaxis:
 
-cp [opciones] archivo_de_origen ruta_de_destino
+.. code:: Bash
+
+   cp [opciones] archivo_de_origen ruta_de_destino
+
 Opciones comunes:
 
 • -R → copia los directorios y su contenido de forma recursiva
