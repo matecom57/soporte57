@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Absolute URLs</h2>
+
+<h3>1. Comando ls</h3>
+
+El comando ls muestra los archivos y directorios que hay en una ubicación determinada.
+
+Sintaxis:
+
+ls [opciones] [directorio_o_ruta]
+Opciones comunes:
+
+• -a → muestra los archivos ocultos, incluidos los que empiezan por un punto (.)
+
+• -l → muestra una lista detallada con permisos, propietario, tamaño y marcas de tiempo
+
+Ejemplo:
+
+ls -Ra /ruta/al/directorio
+Muestra todos los archivos y subdirectorios de forma recursiva dentro de /ruta/al/directorio, 
+incluidos los archivos ocultos, lo que te permite inspeccionar la estructura completa del 
+directorio.
+
+2. Comando pwd
+El comando pwd muestra la ruta completa del directorio de trabajo actual.
+
+Sintaxis:
+
+pwd [opciones]
+Opciones comunes:
+
+• -L → muestra la ruta lógica utilizando enlaces simbólicos o atajos de entorno
+
+• -P → muestra la ruta física resolviendo todos los enlaces simbólicos
+
+Ejemplo:
+
+pwd -P
+Muestra la ruta exacta del directorio sin enlaces simbólicos, lo que ayuda a verificar la ubicación 
+real del directorio de trabajo actual.
+
+3. Comando cd
+El comando cd cambia el directorio de trabajo actual a una ubicación especificada.
+
+Sintaxis:
+
+cd [ruta_o_directorio]
+Opciones comunes: (no hay opciones disponibles para este comando)
+
+Atajos comunes:
+
+• cd → te lleva al directorio de inicio del usuario actual
+
+• cd .. → sube un directorio
+
+• cd – → vuelve al directorio anterior
+
+Ejemplo:
+
+cd /var/www/html
+Cambia el directorio actual a /var/www/html, lo que te permite acceder y administrar los archivos de 
+esa ubicación.
+
+4. Comando mkdir
+El comando mkdir crea uno o más directorios en una ubicación especificada.
+
+Sintaxis:
+
+mkdir [opciones] nombre_directorio1 nombre_directorio2
+Opciones comunes:
+
+• -m → establece permisos personalizados para el nuevo directorio (p. ej., -m 755)
+
+• -p → crea los directorios principales según sea necesario y evita errores si ya existen
+
+Ejemplo:
+
+mkdir -p /ruta/a/carpeta_de_destino/nueva_carpeta
+Crea el directorio /ruta/a/carpeta_de_destino/nueva_carpeta, incluyendo cualquier directorio 
+principal que falte, lo que te permite crear estructuras de carpetas anidadas con un solo comando.
+
+5. Comando rmdir
+El comando mkdir crea uno o más directorios en una ubicación especificada.
+
+Sintaxis:
+
+mkdir [opciones] nombre_del_directorio1 nombre_del_directorio2
+Opciones comunes:
+
+• -m → establece permisos personalizados para el nuevo directorio (p. ej., -m 755)
+
+• -p → crea los directorios principales según sea necesario y evita errores si ya existen
+
+Ejemplo:
+
+mkdir -p /ruta/a/carpeta_destino/nueva_carpeta
+Crea el directorio /ruta/a/carpeta_de_destino/nueva_carpeta, incluyendo cualquier directorio 
+principal que falte, lo que te permite crear estructuras de carpetas anidadas con un solo comando.
+
+6. Comando rm
+El comando rm elimina archivos o directorios del sistema de archivos.
+
+Sintaxis:
+
+rm [opciones] archivo1 archivo2
+Opciones comunes:
+
+• -r → elimina directorios y su contenido de forma recursiva
+
+• -f → fuerza la eliminación sin pedir confirmación
+
+• -i → pide confirmación antes de cada eliminación
+
+Ejemplo:
+
+rm -rf nombre-de-carpeta
+Elimina el directorio nombre-de-carpeta y todo su contenido de forma recursiva sin pedir 
+confirmación, lo cual es útil para tareas de limpieza, pero hay que tener cuidado para evitar la 
+pérdida accidental de datos.
+
+7. Comando cp
+El comando cp copia archivos o directorios de una ubicación a otra.
+
+Sintaxis:
+
+cp [opciones] archivo_de_origen ruta_de_destino
+Opciones comunes:
+
+• -R → copia los directorios y su contenido de forma recursiva
+
+• -i → te pregunta antes de sobrescribir archivos existentes
+
+• -v → muestra información detallada del proceso de copia
+
+Ejemplo:
+
+cp -R /ruta/a/carpeta /ruta/de/destino/a/carpeta_copia
+Copia el directorio /ruta/a/carpeta y todo su contenido a /ruta/de/destino/carpeta_copia, 
+conservando la estructura para tareas de copia de seguridad o duplicación.
+
+8. Comando mv
+El comando mv mueve o renombra archivos y directorios.
+
+Sintaxis:
+
+mv [opciones] origen destino
+Opciones comunes:
+
+• -i → te pregunta antes de sobrescribir archivos existentes
+
+• -v → muestra información detallada de la operación de movimiento
+
+• -n → evita sobrescribir los archivos existentes
+
+Ejemplo:
+
+mv /ruta/original/archivo1.txt /nuevo/directorio/
+Mueve el archivo file1.txt de /ruta/original/ a /directorio/nuevo/archivo/, lo que te permite 
+reorganizar los archivos o reubicarlos en una carpeta diferente.
+
+9. Comando touch
+El comando touch crea un nuevo archivo vacío o actualiza la marca de tiempo de un archivo existente.
+
+Sintaxis:
+
+touch [opciones] [ruta_y_nombre_del_archivo]
+Opciones comunes:
+
+• -c → evita crear un archivo si no existe
+
+• -t → establece una marca de tiempo específica para el archivo
+
+• -a → actualiza solo la hora de acceso
+
+Ejemplo:
+
+touch file.txt
+Crea un archivo vacío llamado file.txt en el directorio actual, lo que te permite generar 
+rápidamente archivos de marcador de posición o de configuración.
+
+10. Comando file
+El comando file identifica el tipo de un archivo en función de su contenido.
+
+Sintaxis:
+
+file [nombre_archivo]
+Opciones comunes:
+
+• -k → muestra información adicional sobre el tipo de archivo
+
+• -i → muestra el tipo MIME del archivo
+
+• -L → sigue los enlaces simbólicos e informa del tipo de archivo real
+
+Ejemplo:
+
+archivo hostinger_sym.txt
+Muestra el tipo de archivo real al que apunta hostinger_sym.txt, lo que ayuda a verificar enlaces 
+simbólicos o detectar formatos de archivo desconocidos.
+
+11. Comandos zip y unzip
+El comando zip comprime archivos o directorios en un archivo ZIP, mientras que el comando unzip 
+extrae archivos de un archivo ZIP.
+
+Sintaxis:
+
+zip [opciones] nombre_archivo_zip archivo1 archivo2
+
+unzip [opciones] nombre_archivo_zip
+Opciones comunes:
+
+• -r (zip) → comprime directorios de forma recursiva
+
+• -e (zip) → cifra el archivo con una contraseña
+
+• -l (unzip) → muestra el contenido del archivo sin extraerlo
+
+• -d (unzip) → extrae los archivos a un directorio especificado
+
+Ejemplo:
+
+zip -r archive.zip /ruta/a/carpeta && unzip archive.zip
+Crea un archivo comprimido archive.zip a partir de /ruta/a/carpeta y, a continuación, extrae su 
+contenido en el directorio actual, lo que te permite agrupar y restaurar archivos de forma 
+eficiente.
+
+12. Comando tar
+El comando tar crea, extrae y administra archivos que agrupan varios archivos o directorios.
+
+Sintaxis:
+
+tar [opciones] nombre_archivo_tar archivo1 archivo2
+Opciones comunes:
+
+• -c → crea un nuevo archivo
+
+• -x → extrae archivos de un archivo comprimido
+
+• -f → especifica el nombre del archivo
+
+• -z → comprime o descomprime usando gzip
+
+Ejemplo:
+
+tar -czf archivo.tar.gz archivo1.txt archivo2.txt
+Crea un archivo comprimido archive.tar.gz que contiene file1.txt y file2.txt, lo que te permite 
+agrupar y reducir el tamaño de los archivos con un solo comando.
+
+13. Comandos nano, vi y jed
+Los comandos nano, vi y jed abren y editan archivos de texto directamente en la terminal.
+
+Sintaxis:
+
+nano nombre_archivo
+
+vi nombre_del_archivo
+
+jed nombre_del_archivo
+Opciones comunes: (no se necesitan opciones comunes para la edición básica de archivos)
+
+Ejemplo:
+
+nano nombre_archivo.txt
+Abre el archivo file.txt en el editor de texto Nano, lo que te permite crear o modificar el 
+contenido del archivo directamente desde la terminal.
+
+14. Comando cat
+El comando cat muestra, combina o crea archivos leyendo y escribiendo su contenido.
+
+Sintaxis:
+
+cat [opciones] nombre_archivo
+Opciones comunes:
+
+• -n → muestra los números de línea junto al contenido del archivo
+
+• -b → muestra los números de línea solo para las líneas que no están vacías
+
+• -s → omite las líneas vacías repetidas
+
+Ejemplo:
+
+cat archivo1.txt archivo2.txt > archivo.txt
+Combina el contenido de archivo1.txt y archivo2.txt en destino.txt, lo que te permite fusionar 
+varios archivos en un único archivo de salida.
+
+15. Comando grep
+El comando grep busca patrones o palabras clave específicos dentro de archivos o en la salida de 
+comandos.
+
+Sintaxis:
+
+grep [opciones] palabra clave [archivo]
+Opciones comunes:
+
+• -i → realiza una búsqueda sin distinguir entre mayúsculas y minúsculas
+
+• -r → busca de forma recursiva en los directorios
+
+• -n → muestra los números de línea con los resultados coincidentes
+
+Ejemplo:
+
+ls | grep "file.txt"
+Filtra la salida del comando ls para mostrar solo las entradas que coinciden con file.txt, lo que te 
+permite localizar rápidamente elementos específicos en una lista.
+
+16. Comando sed
+El comando sed busca, sustituye y transforma texto dentro de archivos o flujos de entrada.
+
+Sintaxis:
+
+sed [opciones] 's/patrón/sustitución/' archivo
+Opciones comunes:
+
+• -i → edita los archivos in situ sin crear una nueva salida
+
+• -n → suprime la salida automática (se usa con comandos de impresión explícitos)
+
+• -e → permite múltiples expresiones de edición
+
+Ejemplo:
+
+sed 's/red/blue/' colors.txt
+Reemplaza la primera aparición de «red» por «blue» en cada línea de colors.txt, lo que permite 
+modificar el texto rápidamente sin tener que abrir el archivo manualmente.
+
+17. Comando head
+El comando head muestra las primeras líneas o bytes de un archivo o de la salida de un comando.
+
+Sintaxis:
+
+head [opciones] nombre_del_archivo
+Opciones comunes:
+
+• -n → especifica el número de líneas que se van a mostrar
+
+• -c → especifica el número de bytes que se van a mostrar
+
+Ejemplo:
+
+head -n 5 archivo.txt
+Muestra las primeras cinco líneas de file.txt, lo que te permite echar un vistazo rápido al 
+principio de un archivo sin abrirlo por completo.
+
+18. Comando tail
+El comando tail muestra las últimas líneas o bytes de un archivo o de la salida de un comando.
+
+Sintaxis:
+
+tail [opciones] nombre_archivo
+Opciones comunes:
+
+• -n → especifica el número de líneas que se van a mostrar
+
+• -c → especifica el número de bytes que se van a mostrar
+
+• -f → sigue el archivo en tiempo real a medida que se añaden nuevas líneas
+
+Ejemplo:
+
+ping -c 10 8.8.8.8 | tail -n 5
+Muestra las últimas cinco líneas de la salida del comando ping, lo que te permite centrarte en los 
+resultados o resúmenes más recientes.
+
+19. Comando awk
+El comando awk procesa y analiza texto aplicando patrones y acciones a datos estructurados.
+
+Sintaxis:
+
+awk 'patrón {acción}' archivo_de_entrada
+Opciones comunes:
+
+• -F → especifica un separador de campos personalizado
+
+• -v → asigna variables para usarlas dentro del comando
+
+• -f → lee el programa awk desde un archivo
+
+Ejemplo:
+
+awk -F':' '{ total += $2; students[$1] = $2 } END { average = total / length(students); for (student 
+in students) if (students[student] > average) print student }' score.txt
+Calcula el valor medio a partir de score.txt y muestra los nombres de las entradas con valores 
+superiores a la media, lo que te permite realizar análisis de datos directamente en la terminal.
+
+20. Comando sort
+El comando sort ordena las líneas de texto de un archivo o flujo de entrada en un orden 
+especificado.
+
+Sintaxis:
+
+sort [opciones] [nombre_archivo]
+Opciones comunes:
+
+• -r → ordena en orden inverso
+
+• -n → ordena numéricamente en lugar de alfabéticamente
+
+• -k → ordena según una columna o campo específico
+
+Ejemplo:
+
+sort -n archivo.txt
+Ordena el contenido de file.txt numéricamente y muestra el resultado en la terminal sin modificar el 
+archivo original.
+
+21. Comando cut
+El comando cut extrae secciones específicas de texto de cada línea de un archivo o flujo de entrada.
+
+Sintaxis:
+
+cut [opciones] archivo
+Opciones comunes:
+
+• -f → selecciona campos (columnas) específicos
+
+• -d → especifica un delimitador para separar campos
+
+• -c → extrae posiciones de caracteres específicas
+
+• -b → extrae rangos de bytes específicos
+
+Ejemplo:
+
+cut -d',' -f3-5 list.txt
+Extrae los campos del tercero al quinto de cada línea de list.txt utilizando una coma como 
+delimitador, lo que te permite aislar datos estructurados de archivos como los CSV.
+
+22. Comando diff
+El comando diff compara dos archivos y muestra las diferencias entre ellos.
+
+Sintaxis:
+
+diff [opciones] nombre_archivo1 nombre_archivo2
+Opciones comunes:
+
+• -c → muestra las diferencias en formato contextual con las líneas circundantes
+
+• -u → muestra un formato de salida unificado (se usa normalmente para parches)
+
+• -i → ignora las diferencias en mayúsculas y minúsculas
+
+Ejemplo:
+
+diff -c 1.txt 2.txt
+Muestra las diferencias entre 1.txt y 2.txt con el contexto circundante, lo que facilita la 
+comprensión de los cambios entre las versiones de los archivos.
+
+23. Comando tee
+El comando tee escribe la salida del comando tanto en la terminal como en un archivo al mismo 
+tiempo.
+
+Sintaxis:
+
+comando | tee [opciones] nombre_archivo
+Opciones comunes:
+
+• -a → añade la salida al archivo en lugar de sobrescribirlo
+
+• -i → ignora las señales de interrupción (útil en tuberías)
+
+Ejemplo:
+
+ping 8.8.8.8 | tee -a test_network.txt
+Añade la salida del comando ping al archivo test_network.txt mientras la muestra en la terminal, lo 
+que te permite supervisar y guardar los resultados al mismo tiempo.
+
+24. Comando locate
+El comando locate busca archivos por nombre utilizando una base de datos del sistema predefinida.
+
+Sintaxis:
+
+locate [opciones] palabra_clave
+Opciones comunes:
+
+• -i → realiza una búsqueda sin distinguir entre mayúsculas y minúsculas
+
+• -r → busca usando una expresión regular
+
+• -n → limita el número de resultados que se muestran
+
+Ejemplo:
+
+locate -i filename.txt
+Busca todos los archivos que coincidan con filename.txt sin distinguir entre mayúsculas y 
+minúsculas, y devuelve los resultados rápidamente basándose en el índice de archivos del sistema.
+
+25. Comando find
+El comando find busca archivos y directorios en una ruta especificada según unas condiciones.
+
+Sintaxis:
+
+find [ruta] [opciones] expresión
+Opciones comunes:
+
+• -name → busca elementos por nombre
+
+• -type f → limita los resultados a archivos
+
+• -type d → limita los resultados a directorios
+
+Ejemplo:
+
+find /ruta/a/carpeta -type f -name "archivo.txt"
+Busca un archivo llamado file.txt dentro de /ruta/a/carpeta, mostrando los resultados en tiempo real 
+según los criterios especificados.
+
+26. Comando sudo
+El comando sudo ejecuta un comando con privilegios elevados (de administrador).
+
+Sintaxis:
+
+sudo [opciones] comando
+Opciones comunes:
+
+• -u → ejecuta el comando como un usuario específico
+
+• -i → inicia un shell con privilegios de root
+
+• -l → muestra los comandos permitidos para el usuario actual
+
+Ejemplo:
+
+sudo nano archivo.txt
+Abre el archivo file.txt en el editor Nano con privilegios de administrador, lo que te permite 
+modificar archivos a nivel del sistema que requieren acceso elevado.
+
+27. Comandos su y whoami
+El comando su cambia el usuario actual a otra cuenta de usuario, mientras que el comando whoami 
+muestra el usuario que está conectado actualmente.
+
+Sintaxis:
+
+su [opciones] [nombre de usuario]
+
+whoami
+Opciones comunes:
+
+• – → inicia un shell de inicio de sesión para el usuario de destino
+
+• -c → ejecuta un único comando como el usuario especificado
+
+Ejemplo:
+
+su - root
+Cambia al usuario root e inicia un shell de inicio de sesión, lo que te permite ejecutar comandos 
+con todos los privilegios del sistema.
+
+28. Comando chmod
+El comando chmod cambia los permisos de archivos y directorios para usuarios, grupos y otros.
+
+Sintaxis:
+
+chmod [opciones] permisos archivo_o_directorio
+Opciones comunes:
+
+• -R → aplica los cambios de forma recursiva a los directorios y su contenido
+
+• -v → muestra un mensaje por cada archivo procesado
+
+• -c → solo informa cuando se realiza un cambio
+
+Ejemplo:
+
+chmod 744 archivo1.txt
+Establece los permisos para archivo1.txt de modo que el propietario pueda leer, escribir y ejecutar, 
+mientras que los demás solo puedan leer, lo que permite un acceso controlado al archivo.
+
+29. Comando chown
+El comando chown cambia la propiedad de archivos y directorios.
+
+Sintaxis:
+
+chown [opciones] propietario:grupo archivo1 archivo2
+Opciones comunes:
+
+• -R → aplica los cambios de propiedad de forma recursiva
+
+• -v → muestra un mensaje por cada archivo procesado
+
+• -c → solo informa cuando se realiza un cambio
+
+Ejemplo:
+
+chown admin-vps:developers archivo1.txt
+Establece a admin-vps como propietario y a developers como grupo para el archivo file1.txt, lo que 
+permite un control de acceso y la administración adecuada de archivos.
+
+30. Comandos useradd, passwd y userdel
+El comando useradd crea una nueva cuenta de usuario, el comando passwd establece o actualiza la 
+contraseña de un usuario y el comando userdel elimina una cuenta de usuario.
+
+Sintaxis:
+
+useradd [opciones] nombredeusuario
+
+passwd nombredeusuario
+
+userdel [opciones] nombredeusuario
+Opciones comunes:
+
+• -m (useradd) → crea un directorio de inicio para el usuario
+
+• -r (userdel) → elimina el directorio de inicio y los archivos del usuario
+
+• -l (passwd) → bloquea una cuenta de usuario
+
+Ejemplo:
+
+sudo useradd -m newuser && sudo passwd newuser
+Crea un nuevo usuario llamado newuser con un directorio de inicio y establece una contraseña, lo que 
+permite que la cuenta inicie sesión y utilice el sistema.
+
+31. Comando df
+El comando df muestra el uso del espacio en disco de los sistemas de archivos.
+
+Sintaxis:
+
+df [opciones] [sistema_de_archivos]
+Opciones comunes:
+
+• -h → muestra los resultados en un formato legible (KB, MB, GB)
+
+• -T → muestra el tipo de sistema de archivos
+
+• -a → incluye todos los sistemas de archivos, incluso los vacíos
+
+Ejemplo:
+
+df -h
+Muestra el uso del disco para todos los sistemas de archivos montados en un formato fácil de 
+entender, lo que te ayuda a evaluar rápidamente el espacio de almacenamiento disponible y utilizado.
+
+32. Comando du
+El comando du comprueba el tamaño de un directorio y su contenido.
+
+Sintaxis:
+
+du [directorio]
+El comando comprobará tu directorio de trabajo si no especificas una ruta o carpeta. Por defecto, 
+desglosa el uso de disco de cada subcarpeta, pero puedes añadir la opción -s para resumir el uso 
+total en una sola salida.
+
+También puedes usar la opción -M para cambiar la información de KB a MB.
+
+33. Comando top
+El comando top muestra información en tiempo real sobre los procesos en ejecución y el uso de los 
+recursos del sistema.
+
+Sintaxis:
+
+top [opciones]
+Opciones comunes:
+
+• -p → supervisa un proceso específico por su ID (PID)
+
+• -d → establece el intervalo entre actualizaciones de la pantalla
+
+• -u → muestra los procesos de un usuario específico
+
+Ejemplo:
+
+top -u root
+Muestra el uso de recursos en tiempo real de los procesos del usuario root, lo que te ayuda a 
+supervisar el rendimiento del sistema e identificar las tareas que consumen muchos recursos.
+
+34. Comando htop
+El comando htop muestra y administra los procesos en ejecución en una interfaz interactiva.
+
+Sintaxis:
+
+htop [opciones]
+Opciones comunes:
+
+• -d → establece el intervalo de actualización
+
+• -u → muestra los procesos de un usuario específico
+
+• –tree → muestra los procesos en una vista jerárquica en árbol
+
+Ejemplo:
+
+htop
+Abre un visor de procesos interactivo que muestra el uso de la CPU y la memoria, lo que te permite 
+navegar, filtrar y administrar los procesos en tiempo real.
+
+35. Comando ps
+El comando ps muestra una instantánea de los procesos que se están ejecutando en ese momento.
+
+Sintaxis:
+
+ps [opciones]
+Opciones comunes:
+
+• -A → muestra todos los procesos en ejecución
+
+• -u → muestra los procesos de un usuario específico
+
+• -r → muestra solo los procesos en ejecución
+
+Ejemplo:
+
+ps -A
+Muestra todos los procesos activos en el sistema en un momento determinado, lo que te permite 
+consultar los ID de los procesos, su estado y el uso de recursos.
+
+36. Comando uname
+El comando uname muestra información del sistema, como el kernel, la arquitectura y el sistema 
+operativo.
+
+Sintaxis:
+
+uname [opciones]
+Opciones comunes:
+
+• -a → muestra toda la información disponible del sistema
+
+• -r → muestra la versión del kernel
+
+• -m → muestra la arquitectura de hardware del equipo
+
+Ejemplo:
+
+uname -a
+Muestra toda la información del sistema, incluyendo la versión del kernel y la arquitectura, lo que 
+te ayuda a identificar tu entorno Linux.
+
+37. Comando hostname
+El comando hostname muestra o establece el nombre de host del sistema.
+
+Sintaxis:
+
+hostname [opciones]
+Opciones comunes:
+
+• -i → muestra la dirección IP del host
+
+• -a → muestra el alias del nombre de host
+
+• -A → muestra el nombre de dominio completo (FQDN)
+
+Ejemplo:
+
+hostname -A
+Muestra el nombre de dominio completo del sistema, lo que ayuda a identificar el servidor dentro de 
+una red o dominio.
+
+38. Comando time
+El comando time mide cuánto tarda en ejecutarse un comando o un script.
+
+Sintaxis:
+
+time comando
+Opciones comunes: (no se requieren opciones de uso común para el uso básico)
+
+Ejemplo:
+
+time ls -la
+Mide cuánto tarda en ejecutarse el comando ls -la, proporcionando detalles sobre el tiempo de 
+ejecución, como el tiempo real, el tiempo de usuario y el tiempo del sistema.
+
+39. Comando systemctl
+El comando systemctl administra los servicios de tu sistema Linux.
+
+Sintaxis:
+
+systemctl subcomando [nombre_del_servicio][opciones]
+Los subcomandos representan tu tarea, como listar, reiniciar, terminar o habilitar los servicios. 
+Por ejemplo, listaremos los servicios de Linux usando esto:
+
+sudo systemctl list-unit-files --type service --all
+Ten en cuenta que este comando puede que no funcione con distribuciones más antiguas, ya que estas 
+utilizan otro gestor de servicios.
+
+40. Comando watch
+El comando watch ejecuta un comando repetidamente a intervalos especificados y muestra el resultado 
+actualizado.
+
+Sintaxis:
+
+watch [opciones] comando
+Opciones comunes:
+
+• -n → establece el intervalo en segundos entre ejecuciones
+
+• -d → resalta los cambios entre actualizaciones
+
+Ejemplo:
+
+watch -n 5 netstat
+Ejecuta el comando netstat cada cinco segundos y actualiza la salida, lo que te permite supervisar 
+los cambios en la actividad de red a lo largo del tiempo.
+
+41. Comando jobs
+El comando jobs muestra los trabajos en segundo plano y los suspendidos en la sesión actual del 
+shell.
+
+Sintaxis:
+
+jobs [opciones] [id_trabajo]
+Opciones comunes:
+
+• -l → muestra los ID de los trabajos junto con los ID de los procesos
+
+• -n → muestra solo los trabajos cuyo estado ha cambiado
+
+• -p → muestra solo los ID de proceso
+
+Ejemplo:
+
+jobs -l
+Muestra todos los trabajos del shell actual con sus ID de proceso, lo que te permite supervisar y 
+administrar las tareas en segundo plano.
+
+42. Comando kill
+El comando kill envía una señal para terminar o controlar un proceso mediante su ID de proceso 
+(PID).
+
+Sintaxis:
+
+kill [signal] process_id
+Opciones comunes:
+
+• -15 → envía la señal predeterminada SIGTERM para una terminación ordenada
+
+• -9 → envía SIGKILL para terminar un proceso de forma forzada
+
+• -l → muestra todas las señales disponibles
+
+Ejemplo:
+
+kill -9 1234
+Termina de forma forzada el proceso con el ID 1234, lo cual es útil cuando un programa deja de 
+responder.
+
+43. Comando shutdown
+El comando shutdown apaga o reinicia el sistema a una hora determinada.
+
+Sintaxis:
+
+shutdown [opciones] [hora] [mensaje]
+Opciones habituales:
+
+• -r → reinicia el sistema en lugar de apagarlo
+
+• -h → detiene o apaga el sistema
+
+• -c → cancela un apagado programado
+
+Ejemplo:
+
+shutdown -r +5
+Programa un reinicio del sistema en cinco minutos, lo que permite a los usuarios prepararse antes de 
+que el sistema se desconecte.
+
+44. Comando ping
+El comando ping envía paquetes de red a un host de destino y mide el tiempo de respuesta.
+
+Sintaxis:
+
+ping [opciones] [nombre_de_host_o_ip]
+Opciones comunes:
+
+• -c → especifica el número de paquetes que se van a enviar
+
+• -i → establece el intervalo entre paquetes
+
+• -s → define el tamaño del paquete
+
+Ejemplo:
+
+ping -c 15 -i 2 google.com
+Envía 15 paquetes a google.com a intervalos de dos segundos, lo que te permite comprobar la 
+conectividad y medir la latencia de la red.
+
+45. Comando wget
+El comando wget descarga archivos de Internet utilizando los protocolos HTTP, HTTPS o FTP.
+
+Sintaxis:
+
+wget [opciones] [url]
+Opciones comunes:
+
+• -O → guarda el archivo con un nombre personalizado
+
+• -c → reanuda la descarga de un archivo que se ha descargado parcialmente
+
+• -q → se ejecuta en modo silencioso sin mostrar mensajes
+
+Ejemplo:
+
+wget https://wordpress.org/latest.zip
+Descarga el archivo desde la URL especificada al directorio actual, lo que te permite recuperar 
+recursos remotos directamente desde la terminal.
+
+46. Comando cURL
+El comando curl transfiere datos hacia o desde un servidor utilizando una URL especificada.
+
+Sintaxis:
+
+curl [opciones] url
+Opciones comunes:
+
+• -O → descarga un archivo y lo guarda con su nombre original
+
+• -o → guarda el archivo con un nombre personalizado
+
+• -X → especifica el método HTTP (GET, POST, PUT, DELETE)
+
+Ejemplo:
+
+curl -X GET https://api.example.com/endpoint
+Envía una solicitud GET al punto final de la API especificado y devuelve la respuesta, lo que te 
+permite probar API o recuperar datos remotos directamente desde la terminal.
+
+47. Comando scp
+El comando scp copia de forma segura archivos y directorios entre sistemas locales y remotos a 
+través de SSH.
+
+Sintaxis:
+
+scp [opciones] origen destino
+Opciones comunes:
+
+• -P → especifica un puerto SSH personalizado
+
+• -r → copia los directorios de forma recursiva
+
+• -C → habilita la compresión durante la transferencia
+
+Ejemplo:
+
+scp archivo1.txt root@185.185.185.185:/ruta/al/directorio
+Copia el archivo file1.txt desde el equipo local al servidor remoto en /ruta/al/directorio, lo que 
+permite una transferencia segura de archivos entre sistemas.
+
+48. Comando rsync
+El comando rsync sincroniza archivos y directorios entre ubicaciones minimizando la transferencia de 
+datos.
+
+Sintaxis:
+
+rsync [opciones] origen destino
+Opciones comunes:
+
+• -a → conserva los atributos de los archivos (permisos, marcas de tiempo, enlaces simbólicos)
+
+• -z → comprime los datos durante la transferencia
+
+• -v → muestra información detallada de la transferencia
+
+Ejemplo:
+
+rsync -avz /ruta/al/directorio/local/ vps-usuario@185.185.185.185:/rutal/al/directorio/remoto/
+Sincroniza la carpeta local con el directorio remoto conservando los atributos y comprimiendo los 
+datos, lo que da como resultado transferencias más rápidas y eficientes.
+
+49. Comando ip
+El comando ip muestra y administra las interfaces de red, las direcciones y el enrutamiento.
+
+Sintaxis:
+
+ip [opciones] objeto comando
+Opciones comunes:
+
+• address → administra y muestra direcciones IP
+
+• link → administra las interfaces de red
+
+• ruta → muestra o modifica las tablas de enrutamiento
+
+Ejemplo:
+
+ip address show
+Muestra todas las interfaces de red y sus direcciones IP asignadas, lo que te ayuda a revisar y 
+solucionar problemas de configuración de red.
+
+50. Comando netstat
+El comando netstat muestra las conexiones de red, las tablas de enrutamiento y las estadísticas de 
+las interfaces.
+
+Sintaxis:
+
+netstat [opciones]
+Opciones comunes:
+
+• -a → muestra todas las conexiones, incluidos los sockets en escucha
+
+• -t → muestra las conexiones TCP
+
+• -u → muestra las conexiones UDP
+
+• -r → muestra las tablas de enrutamiento
+
+Ejemplo:
+
+netstat -tuln
+Muestra todos los puertos TCP y UDP en escucha, lo que te ayuda a identificar los servicios de red 
+activos y los puertos abiertos.
+
+51. Comando traceroute
+El comando traceroute rastrea la ruta que siguen los paquetes para llegar a un host de destino.
+
+Sintaxis:
+
+traceroute [opciones] destino
+Opciones comunes:
+
+• -m → establece el número máximo de saltos
+
+• -n → desactiva la resolución DNS para obtener resultados más rápidos
+
+• -w → establece el tiempo de espera en segundos para cada respuesta
+
+Ejemplo:
+
+traceroute google.com
+Muestra cada salto entre tu sistema y google.com, lo que te ayuda a identificar retrasos en la red o 
+problemas de enrutamiento.
+
+52. Comando nslookup
+El comando nslookup consulta a los servidores DNS para recuperar información sobre dominios o 
+direcciones IP.
+
+Sintaxis:
+
+nslookup [opciones] dominio_o_ip [servidor_dns]
+Opciones comunes:
+
+• -type= → especifica el tipo de registro DNS (p. ej., A, MX, TXT)
+
+• -retry= → establece el número de reintentos de consulta
+
+• -port= → utiliza un puerto de servidor DNS específico
+
+Ejemplo:
+
+nslookup -type=MX example.com
+Recupera los registros de intercambio de correo (MX) de example.com, lo que te ayuda a revisar la 
+configuración de DNS y solucionar problemas relacionados con el dominio.
+
+53. Comando dig
+El comando dig consulta los registros DNS y proporciona información detallada sobre un dominio o una 
+dirección IP.
+
+Sintaxis:
+
+dig [opciones] [servidor] [tipo] nombre_o_ip
+Opciones comunes:
+
+• -x → realiza una búsqueda DNS inversa
+
+• +short → muestra un resultado conciso
+
+• @servidor → consulta un servidor DNS específico
+
+Ejemplo:
+
+dig MX domain.com
+Recupera los registros de intercambio de correo (MX) de domain.com, lo que te ayuda a analizar la 
+configuración de DNS y a solucionar problemas de resolución de dominios.
+
+54. Comando history
+El comando history muestra una lista de los comandos ejecutados anteriormente en la sesión actual 
+del shell.
+
+Sintaxis:
+
+history [opciones]
+Opciones comunes:
+
+• -c → borra el historial de comandos
+
+• -r → lee el archivo de historial y lo añade a la sesión actual
+
+• -d → elimina una entrada específica por su ID
+
+Ejemplo:
+
+!145
+Vuelve a ejecutar el comando con el ID 145 de la lista de historial, lo que te permite repetir 
+rápidamente comandos usados anteriormente.
+
+55. Comando man
+El comando man muestra la página del manual de un comando específico.
+
+Sintaxis:
+
+man [opciones] [número_de_sección] nombre_del_comando
+Opciones comunes:
+
+• -k → busca palabras clave en los manuales
+
+• -f → muestra una breve descripción de un comando
+
+• -a → muestra todas las páginas de manual disponibles para un comando
+
+Ejemplo:
+
+man 3 ls
+Muestra la página del manual de la sección 3 para ls, lo que te permite acceder a documentación 
+detallada sobre categorías específicas de comandos.
+
+56. Comando echo
+El comando echo muestra texto o variables en la terminal o en un archivo.
+
+Sintaxis:
+
+echo [opciones] [texto]
+Opciones comunes:
+
+• -n → elimina el salto de línea final de la salida
+
+• -e → habilita la interpretación de secuencias de escape (p. ej., n, t)
+
+Ejemplo:
+
+echo "Hola mundo" > archivo.txt
+Escribe «Hola mundo» en file.txt, lo que te permite crear o sobrescribir archivos con texto 
+personalizado.
+
+57. Comando ln
+El comando ln crea enlaces entre archivos, incluyendo enlaces simbólicos (blandos) y duros.
+
+Sintaxis:
+
+ln [opciones] origen destino
+Opciones comunes:
+
+• -s → crea un enlace simbólico (blando)
+
+• -f → fuerza la creación sobrescribiendo los archivos existentes
+
+• -v → muestra información detallada de la operación
+
+Ejemplo:
+
+ln -s target.txt shortcut.txt
+Crea un enlace simbólico llamado shortcut.txt que apunta a target.txt, lo que te permite acceder al 
+archivo mediante una ruta alternativa.
+
+58. Comandos alias y unalias
+El comando alias crea un atajo para un comando, mientras que el comando unalias elimina un alias 
+existente.
+
+Sintaxis:
+
+alias nombre='comando'
+unalias nombre
+
+Opciones comunes:
+
+• (no se requieren opciones comunes para el uso básico)
+
+Ejemplo:
+
+alias k='kill'
+Crea un alias k para el comando kill, lo que te permite ejecutar kill usando una palabra clave más 
+corta.
+
+59. Comando cal
+El comando cal muestra un calendario para un mes o año específico.
+
+Sintaxis:
+
+cal [opciones] [mes] 2026
+Opciones comunes:
+
+• -3 → muestra el mes anterior, el actual y el siguiente
+
+• -y → muestra todo el año
+
+• -m → muestra el lunes como primer día de la semana
+
+Ejemplo:
+
+cal -3
+Muestra el mes anterior, el actual y el siguiente, lo que te permite ver las fechas cercanas de un 
+vistazo.
+
+60. Comandos apt y dnf
+El comando apt administra paquetes en sistemas basados en Debian, mientras que el comando dnf 
+administra paquetes en sistemas basados en Red Hat.
+
+Sintaxis:
+
+apt [opciones] subcomando
+
+dnf [opciones] subcomando
+Opciones comunes:
+
+• install → instala un paquete
+
+• remove → elimina un paquete
+
+• update → actualiza las listas de paquetes
+
+• upgrade → actualiza los paquetes instalados
+
+Ejemplo:
+
+sudo apt install vim
+Instala el editor de texto vim usando el gestor de paquetes APT, lo que te permite añadir nuevo 
+software al sistema.
+
+</body>
+</html>
+
