@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<h2>Part I. Foundations</h2>
+
+<h3>1. Introduction 3</h3>
+
+HTML5: A New Visual Medium 5
+The Browser as Platform 6
+Browser Realities 7
+3D Graphics Basics 8
+What Is 3D? 8
+3D Coordinate Systems 9
+Meshes, Polygons, and Vertices 10
+Materials, Textures, and Lights 11
+Transforms and Matrices 12
+Cameras, Perspective, Viewports, and Projections 13
+Shaders 14
+
+<h3>2. WebGL: Real-Time 3D Rendering 17</h3>
+
+WebGL Basics 18
+The WebGL API 20
+The Anatomy of a WebGL Application 20
+A Simple WebGL Example 21
+The Canvas Element and WebGL Drawing Context 22
+The Viewport 23
+Buffers, ArrayBuffer, and Typed Arrays 23
+Matrices 24
+The Shader 25
+Drawing Primitives 27
+Creating 3D Geometry 29
+
+Adding Animation 33
+Using Texture Maps 34
+Chapter Summary 41
+
+<h3>3. Three.js—A JavaScript 3D Engine  43</h3>
+
+Three.js Flagship Projects 43
+An Overview of Three.js 46
+Setting Up Three.js 48
+Three.js Project Structure 48
+A Simple Three.js Program 50
+Creating the Renderer 52
+Creating the Scene 52
+Implementing the Run Loop 54
+Lighting the Scene 55
+Chapter Summary 57
+
+<h3>4. Graphics and Rendering in Three.js 59 </h3>
+
+Geometry and Meshes 59
+Prebuilt Geometry Types 59
+Paths, Shapes, and Extrusions 60
+The Geometry Base Class 62
+BufferGeometry for Optimized Mesh Rendering 65
+Importing Meshes from Modeling Packages 66
+The Scene Graph and Transform Hierarchy 67
+Using Scene Graphs to Manage Scene Complexity 67
+Scene Graphs in Three.js 68
+Representing Translation, Rotation, and Scale 72
+Materials 72
+Standard Mesh Materials 73
+Adding Realism with Multiple Textures 74
+Lights 79
+Shadows 81
+Shaders 86
+The ShaderMaterial Class: Roll Your Own 87
+Using GLSL Shader Code with Three.js 89
+Rendering 92
+Post-Processing and Multipass Rendering 93
+Deferred Rendering 94
+Chapter Summary 95
+
+<h3>5. 3D Animation.  97</h3>
+
+Driving Animation with requestAnimationFrame() 99
+
+Using requestAnimationFrame() in Your Application 100
+requestAnimationFrame() and Performance 101
+Frame-Based Versus Time-Based Animation 102
+Animating by Programmatically Updating Properties 102
+Animating Transitions Using Tweens 105
+Interpolation 105
+The Tween.js Library 106
+Easing 108
+Using Key Frames for Complex Animations 110
+Keyframe.js—A Simple Key Frame Animation Utility 110
+Articulated Animation with Key Frames 113
+Using Curves and Path Following to Create Smooth, Natural Motion 116
+Using Morph Targets for Character and Facial Animation 119
+Animating Characters with Skinning 121
+Animating Using Shaders 125
+Chapter Summary 130
+
+<h3>6. CSS3: Advanced Page Effects. 131</h3>
+
+CSS Transforms 133
+Using 3D Transforms 134
+Applying Perspective 137
+Creating a Transform Hierarchy 139
+Controlling Backface Rendering 142
+A Summary of CSS Transform Properties 145
+CSS Transitions 146
+CSS Animations 151
+Pushing the Envelope of CSS 155
+Rendering 3D Objects 155
+Rendering 3D Environments 157
+Using CSS Custom Filters for Advanced Shader Effects 159
+Rendering CSS 3D Using Three.js 160
+Chapter Summary 160
+7. Canvas: Universal 2D Drawing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 163
+Canvas Basics 164
+The Canvas Element and 2D Drawing Context 164
+Canvas API Features 166
+Rendering 3D with the Canvas API 172
+Canvas-Based 3D Libraries 174
+K3D 175
+The Three.js Canvas Renderer 176
+
+Part II. Application Development Techniques
+8. The 3D Content Pipeline. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 187
+The 3D Creation Process 187
+Modeling 188
+Texture Mapping 189
+Animation 189
+Technical Art 190
+3D Modeling and Animation Tools 191
+Traditional 3D Software Packages 192
+Browser-Based Integrated Environments 196
+3D Repositories and Stock Art 200
+3D File Formats 201
+Model Formats 201
+Animation Formats 204
+Full-Featured Scene Formats 205
+Loading Content into WebGL Applications 214
+The Three.js JSON Format 214
+The Three.js Binary Format 221
+Loading a COLLADA Scene with Three.js 222
+Loading a glTF Scene with Three.js 225
+Chapter Summary 226
+9. 3D Engines and Frameworks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 229
+3D Framework Concepts 230
+What Is a Framework? 230
+WebGL Framework Requirements 231
+A Survey of WebGL Frameworks 234
+Game Engines 234
+Presentation Frameworks 236
+Vizi: A Component-Based Framework for Visual Web Applications 240
+Background and Design Philosophy 240
+The Vizi Architecture 241
+Getting Started with Vizi 243
+A Simple Vizi Application 244
+Chapter Summary 251
+10. Developing a Simple 3D Application. . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 253
+Designing the Application 255
+
+Creating the 3D Content 256
+Exporting the Maya Scene to COLLADA 257
+Converting the COLLADA File to glTF 259
+Previewing and Testing the 3D Content 259
+A Vizi-Based Previewer Tool 260
+The Vizi Viewer Class 261
+The Vizi Loader Class 263
+Integrating the 3D into the Application 267
+Developing 3D Behaviors and Interactions 270
+Vizi Scene Graph API Methods: findNode() and map() 270
+Animating Transparency with Vizi.FadeBehavior 272
+Auto-Rotating the Content with Vizi.RotateBehavior 274
+Implementing Rollovers Using Vizi.Picker 274
+Controlling Animations from the User Interface 276
+Changing Colors Using the Color Picker 277
+Chapter Summary 280
+11. Developing a 3D Environment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 281
+Creating the Environment Art 283
+Previewing and Testing the Environment 283
+Previewing the Scene in First-Person Mode 285
+Inspecting the Scene Graph 286
+Inspecting Object Properties 290
+Displaying Bounding Boxes 292
+Previewing Multiple Objects 294
+Using the Previewer to Find Other Scene Issues 296
+Creating a 3D Background Using a Skybox 297
+3D Skyboxes 298
+The Vizi Skybox Object 298
+Integrating the 3D Content into the Application 301
+Loading and Initializing the Environment 301
+Loading and Initializing the Car Model 304
+Implementing First-Person Navigation 307
+Camera Controllers 308
+First-Person Controller: The Math 308
+Mouse Look 310
+Simple Collision Detection 311
+Working with Multiple Cameras 313
+Creating Timed and Animated Transitions 314
+Scripting Object Behaviors 317
+Implementing Custom Components Based on Vizi.Script 317
+A Controller Script to Drive the Car 317
+
+Adding Sound to the Environment 324
+Rendering Dynamic Textures 326
+Chapter Summary 331
+12. Developing Mobile 3D Applications. . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 333
+Mobile 3D Platforms 334
+Developing for Mobile Browsers 335
+Adding Touch Support 336
+Debugging Mobile Functionality in Desktop Chrome 341
+Creating Web Apps 344
+Web App Development and Testing Tools 344
+Packaging Web Apps for Distribution 344
+Developing Native/HTML5 “Hybrid” Applications 346
+CocoonJS: A Technology to Make HTML Games and Applications for
+Mobile Devices 348
+Assembling an Application with CocoonJS 350
+Hybrid WebGL Development: The Bottom Line 357
+Mobile 3D Performance 357
+Chapter Summary 360
+
+
+</body>
+</html>
+
